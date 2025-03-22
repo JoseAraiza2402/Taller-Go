@@ -26,7 +26,6 @@ func main() {
 
 	r := gin.Default()
 
-	// Middleware para loguear todas las solicitudes
 	r.Use(func(c *gin.Context) {
 		fmt.Printf("Solicitud recibida: %s %s\n", c.Request.Method, c.Request.URL.Path)
 		c.Next()
